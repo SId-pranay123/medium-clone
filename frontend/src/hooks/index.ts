@@ -23,7 +23,7 @@ export const useBlog = ({ id }: { id: string }) => {
         },
       })
       .then((response) => {
-        setBlog(response.data.blog);
+        setBlog(response.data);
         setLoading(false);
       });
   }, [id]);
@@ -41,11 +41,11 @@ export const useBlogs = () => {
     axios
       .get(`${BACKEND_URL}/api/v1/blog/bulk`, {
         headers: {
-          Authorization: "Bearer " + localStorage.getItem("token"),
+          Authorization: localStorage.getItem("token"),
         },
       })
       .then((response) => {
-        // console.log(response.data.posts);
+        response.data.posts.reverse();
         setBlogs(response.data.posts);
         setLoading(false);
       });

@@ -15,6 +15,7 @@ export const Blog = () => {
     return (
       <div>
         <Appbar />
+        {/* {console.log(loading)} */}
 
         <div className="h-screen flex flex-col justify-center">
           <div className="flex justify-center">

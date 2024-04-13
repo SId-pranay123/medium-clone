@@ -5,7 +5,6 @@ import { useBlogs } from "../hooks";
 
 export const Blogs = () => {
   const { loading, blogs } = useBlogs();
-  console.log(blogs);
   if (loading) {
     return (
       <div>
@@ -32,7 +31,7 @@ export const Blogs = () => {
           {blogs.map((blog) => (
             <BlogCard
               id={blog.id}
-              //   authorName={blog.author.name || "Anonymous"}
+              authorName={blog.author.email || "Anonymous"}
               title={blog.title}
               content={blog.content}
               publishedDate={"2nd Feb 2024"}

@@ -59,9 +59,9 @@ export function Avatar({
       <span
         className={`${
           size === "small" ? "text-xs" : "text-md"
-        } font-extralight text-gray-600 dark:text-gray-300`}
+        } font-extralight text-white dark:text-gray-300`}
       >
-        {name[0]}
+        {name[0].toUpperCase()}
       </span>
     </div>
   );

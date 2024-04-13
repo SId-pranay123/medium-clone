@@ -1,1 +1,1 @@
-export const BACKEND_URL = "cloudflare workers url";
+export const BACKEND_URL = "https://backend.siddharthtechsteck.workers.dev";
