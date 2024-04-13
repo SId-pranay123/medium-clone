@@ -7,7 +7,7 @@ export interface Blog {
   title: string;
   id: number;
   author: {
-    name: string;
+    email: string;
   };
 }
 
